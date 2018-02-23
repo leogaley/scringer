@@ -1,0 +1,42 @@
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">The RINGER Scraper</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a class="btn btn-danger scrape-new" href="/scrape">SCRAPE NEW ARTICLES!</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <div class="overlay">
+  </div>
+  <div class="background-image">
+  </div>
+  <div class="caption">
+    <h1>Mongo Scraper</h1>
+    <p>Ringer Edition</p>
+  </div>
+</div>
+<div class="container-fluid article-container">
+  <ul class="list-group">
+    {{#each articleList}}
+    <li class="list-group-item">
+        <a href="{{this.link}}">{{this.title}}</a>
+        <button data-id="{{this.id}}" class="show-notes" data-show="false">Article Notes</button>
+        <br>
+        <div data-note="{{this.id}}">
+        </div>
+    </li>
+    {{/each}}
+  </ul>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>The Ringer Mongo Scraper</p>
+  </div>
+</footer>
+
