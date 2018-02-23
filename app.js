@@ -124,7 +124,7 @@ app.get("/scrape", function(req, res) {
   
 });
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = process.env.PORT || '3000';
 
 
 // Listen on port 3000
